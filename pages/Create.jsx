@@ -46,7 +46,7 @@ const Create = () => {
                 value={searchText}
                 placeholder="Search Giphy..."
             />
-            <Button style={{ width: 200, height: 60, padding: 10, marginLeft: 100 }} buttonColor="orange" textColor='black' mode="contained">
+            <Button style={{ width: 200, height: 60, padding: 10, marginLeft: 100, marginTop: 10, marginBottom: 10 }} buttonColor="orange" textColor='black' mode="contained">
                 Select GIF
             </Button>
             <FlatList data={searchText ? searchResults : data}

@@ -42,19 +42,21 @@ const Home = () => {
 
     return (
         <SafeAreaView style={styles.container}>
+
             <TextInput
                 style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
                 onChangeText={handleSearch}
                 value={searchText}
                 placeholder="Search Giphy..."
             />
-            <Button style={{ width: 200, height: 60, padding: 10, marginLeft: 100 }} buttonColor="orange" textColor='black' mode="contained" onPress={() => navigation.navigate("Create")}>
+            <Button style={{ width: 200, height: 60, padding: 10, marginLeft: 100, marginTop: 10, marginBottom: 10 }} buttonColor="orange" textColor='black' mode="contained" onPress={() => navigation.navigate("Create")}>
                 + MindDump
             </Button>
             <FlatList data={searchText ? searchResults : data}
                 numColumns={2}
                 style={styles.list}
                 keyExtractor={({ id }, index) => id}
+                contentContainerStyle={{ paddingBottom: 150 }}
                 renderItem={({ item }) => (
                     <Card style={{
                         flex: 1, flexWrap: "wrap", flexDirection: "row", width: "100%", justifyContent: "space-between",

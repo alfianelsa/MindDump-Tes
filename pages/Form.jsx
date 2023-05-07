@@ -42,11 +42,16 @@ const Form = ({ route, navigation }) => {
                         }}
                     />
                 </Card.Content>
-                <TextInput
-                    label="Description"
-                    value={formData}
-                    onChangeText={formData => setFormData(formData)}
-                />
+                <Card.Content>
+                    <TextInput
+                        style={{ marginTop: 30 }}
+                        label="Description"
+                        multiline={true}
+                        numberOfLines={10}
+                        value={formData}
+                        onChangeText={formData => setFormData(formData)}
+                    />
+                </Card.Content>
             </Card>
             <Button style={{ width: 200, height: 60, padding: 10, marginLeft: 100, marginTop: 50 }} buttonColor="orange" textColor='black' mode="contained" onPress={handleSubmit}>
                 simpan
